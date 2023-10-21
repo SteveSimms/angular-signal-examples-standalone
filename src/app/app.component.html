@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="example-1">Angular Signal</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="toggleNavbar()"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse"
+      [class.show]="showNavBar()"
+      id="navbarNav"
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="example-1">Set Example</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="example-2">Update Example</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="example-3">Mutate Example</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="example-4">Computed Example</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="example-5"
+            >Using Signal over Subject</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,7 @@
+.btn-row {
+  display: flex;
+  justify-content: start;
+}
+.btn-row > a {
+  margin-right: 10px;
+}

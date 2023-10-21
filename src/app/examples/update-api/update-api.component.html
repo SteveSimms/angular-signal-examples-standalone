@@ -1,0 +1,49 @@
+<div class="container mt-4 mb-4">
+  <div class="card">
+    <div class="card-header">Signal API - update</div>
+    <div class="card-body">
+      <h5 class="card-title">Logged in User Details</h5>
+      <div>
+        <table class="table table-bordered" style="width: 400px">
+          <tr>
+            <th>First Name</th>
+            <td>{{ user().firstName }}</td>
+          </tr>
+          <tr>
+            <th>Last Name</th>
+            <td>{{ user().lastName }}</td>
+          </tr>
+          <tr>
+            <th>Phone Number</th>
+            <td>{{ user().phoneNumber }}</td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td>{{ user().email }}</td>
+          </tr>
+          <tr>
+            <th>Admin User</th>
+            <td>{{ user().isAdminUser ? "Yes" : "No" }}</td>
+          </tr>
+        </table>
+      </div>
+
+      <a class="btn btn-primary" (click)="updateEmail()">Update Email</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      Using set method to update the number type value
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ num() }}</h5>
+      <p class="card-text"></p>
+      <div class="btn-row">
+        <a (click)="addOne()" class="btn btn-primary">Add One</a>
+        <a (click)="reset()" class="btn btn-primary">Reset</a>
+        <a (click)="minusOne()" class="btn btn-primary">Minus One</a>
+      </div>
+    </div>
+  </div>
+</div>

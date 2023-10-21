@@ -1,0 +1,39 @@
+<div class="container mt-4 mb-4">
+  <div class="card">
+    <div class="card-header">Instead of Rxjs subject using signal</div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <table class="table table-bordered">
+            <tr>
+              <th>First Name</th>
+              <td>{{ user().firstName }}</td>
+            </tr>
+            <tr>
+              <th>Last Name</th>
+              <td>{{ user().lastName }}</td>
+            </tr>
+            <tr>
+              <th>Phone Number</th>
+              <td>{{ user().phoneNumber }}</td>
+            </tr>
+            <tr>
+              <th>Email</th>
+              <td>{{ user().email }}</td>
+            </tr>
+            <tr>
+              <th>Admin User</th>
+              <td>{{ user().isAdminUser ? "Yes" : "No" }}</td>
+            </tr>
+          </table>
+          <a class="btn btn-primary" (click)="helperService.updateUserRole()"
+            >Update User Role</a
+          >
+        </div>
+        <div class="col-md-6">
+          <app-review></app-review>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

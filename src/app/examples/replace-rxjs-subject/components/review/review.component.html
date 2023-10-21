@@ -1,0 +1,25 @@
+<table class="table table-bordered">
+  <tr>
+    <th>First Name</th>
+    <td>{{ user().firstName }}</td>
+  </tr>
+  <tr>
+    <th>Last Name</th>
+    <td>{{ user().lastName }}</td>
+  </tr>
+  <tr>
+    <th>Phone Number</th>
+    <td>{{ user().phoneNumber }}</td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td>{{ user().email }}</td>
+  </tr>
+  <tr>
+    <th>Admin User</th>
+    <td>{{ user().isAdminUser ? "Yes" : "No" }}</td>
+  </tr>
+</table>
+<a class="btn btn-primary" (click)="helperService.updateUserEmail()"
+  >Update User Email</a
+>

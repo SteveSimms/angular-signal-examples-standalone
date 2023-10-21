@@ -1,0 +1,40 @@
+<div class="container mt-4 mb-4">
+  <div class="card">
+    <div class="card-header">
+      Signal API - compute
+      <button type="button" class="btn btn-primary position-relative">
+        {{ totalCartPrice() }}
+        <span
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+        >
+          {{ cartItems().length }}
+          <span class="visually-hidden">unread messages</span>
+        </span>
+      </button>
+    </div>
+    <div class="card-body">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let product of products()">
+          <div class="card">
+            <img
+              src="{{ product.image }}"
+              class="card-img-top"
+              alt="..."
+              height="380"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ product.title }}</h5>
+              <p class="card-text">
+                {{ product.description }}
+              </p>
+              <h6>Price: {{ product.price | currency : "USD" }}</h6>
+            </div>
+            <a (click)="addToCart(product)" class="btn btn-primary"
+              >Add to cart</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
